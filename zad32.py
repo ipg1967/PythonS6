@@ -11,9 +11,14 @@ array = [
 ]  # какой то массив - в условии не оговорено
 print('Массив создан:')
 print(*array) # покажем созданный массив
-list = []
-for i in range(len(array)):
-    if minimum <= array[i] <= maximum:
-        list.append(i)
-print("индексы элементов массива в указанном диапазоне значений:")
-print(*list)
+
+# list = []
+# for i in range(len(array)):
+#     if minimum <= array[i] <= maximum:
+#         list.append(i)
+# print("индексы элементов массива в указанном диапазоне значений:")
+# print(*list)
+
+# то же но через компрехеншен лист
+list_2 = [i for i in range(len(array)) if minimum <= array[i] <= maximum]
+print(*list_2)
